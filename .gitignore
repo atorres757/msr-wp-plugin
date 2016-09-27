@@ -1,0 +1,14 @@
+
+# eclipse
+.buildpath
+.settings
+.project
+
+# build
+build
+
+# composer
+vendor/
+
+# logs
+*.log

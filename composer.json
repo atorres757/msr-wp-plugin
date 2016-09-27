@@ -1,0 +1,20 @@
+{
+    "name": "root/msr-wp-plugin",
+    "require-dev": {
+        "phpunit/phpunit": "^5.5"
+    },
+    "authors": [
+        {
+            "name": "Allen Torres",
+            "email": "atorres757@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "includes/lib/"
+        ],
+        "psr-4": {
+          "Msr\\": "src/Msr"
+        }
+    }
+}

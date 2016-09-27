@@ -1,0 +1,43 @@
+{
+  "response": {
+    "recordset": {
+      "total": 1,
+      "remaining": 0,
+      "page": 1
+    },
+    "events": [
+      {
+        "organization": {
+          "uri": "/calendars/organization/3A6F2EE2-07D5-B657-BAF55C4CF5FED647",
+          "name": "Tidewater Sports Car Club"
+        },
+        "venue": {
+          "postalCode": 23521,
+          "geo": {
+            "type": "Point",
+            "coordinates": [
+              -76.15999700208091,
+              36.920000153805375
+            ]
+          },
+          "city": "Virginia Beach",
+          "uri": "/calendars/venue/9CE94903-0D08-E690-693714C52C5D46ED",
+          "name": "ACU-4 Little Creek Amphibious Base",
+          "region": "Va"
+        },
+        "description": "<p><span\n     style=\"color:rgb(68, 68, 68)\">Pre-registration opens&#160;five weeks prior to the event for Season Subscription holders.&#160; Pre-Registration will opens to Members 4 &#189; weeks prior and General Pre-Registration opens 2 &#189; weeks prior to the event.&#160; Entrants above 175 will be placed on a waiting list.&#160; Pre-registration will close 10 days before the event</span> in order for us to provide the access list the Navy in a timely manner.&#160; Remember you must register for this event in order to access the facility this includes all spectators.</p>\n\n    <p>* Event Venue is Subject To Change</p>\n\n    <p><u><strong><span\n     style=\"color:rgb(0, 0, 255)\">Schedule</span></strong></u></p>\n\n    <p>7:30 &#160; &#160; &#160; &#160; &#160; &#160;&#160;Gates Open</p>\n\n    <p>7:30&#160;&#8211;&#160;9:15 &#160;Registration</p>\n\n    <p>7:30 &#8211; 9:15 &#160;Tech</p>\n\n    <p>8:45 &#160; &#160; &#160; &#160; &#160; &#160; Novice Meeting/Course Walk at Start Line</p>\n\n    <p>9:15 &#160; &#160; &#160; &#160; &#160; &#160; MANDATORY Driver's Meeting at the TSCC trailer</p>\n\n    <p>9:30 &#160; &#160; &#160; &#160; &#160; &#160; First Car Off</p>\n\n    <p>The event will take place RAIN OR SHINE. In the event of severe weather, a decision will be made at the driver&#8217;s meeting to determine whether or not we will be running. You will be notified by email if the race event is cancelled before its scheduled date.</p>",
+        "detailuri": "http://www.MotorsportReg.com/events/august-autocross-acu-4-little-creek-amphibious-base-tidewater-sports-car-club-014392?utm_source=apis&utm_medium=apim&utm_campaign=apic&utm_content=json",
+        "start": "2016-08-21",
+        "end": "2016-08-21",
+        "id": "ED81B16C-A3D2-B03A-01EF4E3DDBF9CDF2",
+        "registration": {
+          "start": "2016-07-18 04:00",
+          "end": "2016-08-11 03:59"
+        },
+        "type": "Autocross/Solo",
+        "uri": "/calendars/ED81B16C-A3D2-B03A-01EF4E3DDBF9CDF2",
+        "name": "August Autocross"
+      }
+    ]
+  }
+}
