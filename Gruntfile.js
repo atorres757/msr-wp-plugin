@@ -77,6 +77,25 @@ module.exports = function( grunt ){
 				tasks: ['uglify']
 			}
 		},
+		
+		// build commands
+		exec: {
+		  tests: 'phpunit -c includes/tests/phpunit.xml',
+      buildDir: '[ -d builds ] || mkdir -p builds/src',
+      rsync: 'rsync -av --exclude=*build* --exclude=".git*" --exclude=*Gruntfile.js* --exclude=*node_modules* --exclude=*vendor* --exclude=*includes/tests* . ./builds/src',
+      composer: 'composer install --no-dev -d builds/src',
+		  bundle: {
+		    cmd: function () {
+		      var version = this.option('buildVer');
+		      var cmd = 'cd builds/src && zip -r -x=*.project* -x=*.buildpath* -x=*.settings* -x="composer.*" ../'+ version +'.zip .';
+		      
+		      return cmd;
+		    },
+		    options: {
+	        buildVer: '1.0'
+	      }
+		  }
+		}
 
 	});
 
@@ -85,6 +104,7 @@ module.exports = function( grunt ){
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks('grunt-exec');
 
 	// Register tasks
 	grunt.registerTask( 'default', [
@@ -92,5 +112,17 @@ module.exports = function( grunt ){
 		'cssmin',
 		'uglify'
 	]);
+	
+  grunt.registerTask( 'build', [
+    'less',
+    'cssmin',
+    'uglify',
+    'exec:tests',
+    'exec:buildDir',
+    'exec:rsync',
+    'exec:composer'
+  ]);
+  
+  grunt.registerTask( 'bundle', ['exec:bundle']);
 
 };

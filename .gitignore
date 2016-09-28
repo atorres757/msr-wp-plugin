@@ -5,10 +5,18 @@
 .project
 
 # build
-build
+builds
+assests/*/*.min.*
 
 # composer
 vendor/
 
 # logs
 *.log
+
+# npm
+node_modules
+
+# osx
+.DS_Store
+
