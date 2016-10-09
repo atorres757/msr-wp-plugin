@@ -87,7 +87,7 @@ module.exports = function( grunt ){
 		  bundle: {
 		    cmd: function () {
 		      var version = this.option('buildVer');
-		      var cmd = 'cd builds/src && zip -r -x=*.project* -x=*.buildpath* -x=*.settings* -x="composer.*" ../'+ version +'.zip .';
+		      var cmd = 'cd builds/src && zip -r -x=*.project* -x=*.buildpath* -x=*.settings* -x="composer.*" ../msr_wp_plugin-'+ version +'.zip .';
 		      
 		      return cmd;
 		    },
