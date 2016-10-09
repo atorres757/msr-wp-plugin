@@ -50,7 +50,7 @@ class MSR_WP_Widget extends WP_Widget {
             if (!empty($events->content)) {
                 $list = "<ul>\n";
                 foreach ($events->content as $event) {
-                    $list .= "<li><a href=\"".$event->detailUrl."\">".$event->name." - ".date('m/d', strtotime($eventDate)."</a></li>";
+                    $list .= "<li><a href=\"".$event->detailUrl."\">".$event->name." - ".date('m/d', strtotime($event->startDate))."</a></li>";
                 }
                 $list .= "</ul>";
                 echo $list;
