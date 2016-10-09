@@ -16,5 +16,8 @@
         "psr-4": {
           "Msr\\": "src/Msr"
         }
+    },
+    "require": {
+        "monolog/monolog": "^1.21"
     }
 }
