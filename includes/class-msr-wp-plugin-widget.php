@@ -28,7 +28,7 @@ class MSR_WP_Widget extends WP_Widget {
     function widget( $args, $instance ) {
         // Widget output
         
-        $orgId = get_option(MSR_WP_Plugin_Settings::getSetting(ORG_ID));
+        $orgId = MSR_WP_Plugin_Settings::getOpt(MSR_WP_Plugin_Settings::ORG_ID);
         if (!empty($orgId)) {
             $events = $this->msrService->getOrgCalendar($orgId);
             if (!empty($events->content)) {

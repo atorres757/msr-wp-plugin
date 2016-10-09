@@ -65,9 +65,9 @@ class MSR_WP_Plugin_Settings {
 	 * @return string
 	 * 
 	 */
-	public static function getSetting($setting)
+	public static function getOpt($setting, $defualt = null)
 	{
-	    return self::BASE . $setting;
+	    return get_option(self::BASE . $setting, $default);
 	}
 
 	/**
