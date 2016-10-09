@@ -53,7 +53,7 @@ class MSR_WP_Widget extends WP_Widget {
                     $time = time();
                     $regStart = strtotime($event->regStartDate);
                     $regEnd = strtotime($event->regEndDate);
-                    $regOpen =  ($regStart <= $time && $regEnd > $time) ? 'Open' : '<span style="color:red;">Closed</span>';
+                    $regOpen =  ($regStart <= $time && $regEnd > $time) ? '<span style="color:green;">Open</span>' : '<span style="color:red;">Closed</span>';
                     $list .= "<li><a href=\"".$event->detailUrl."\">".$event->name." - ".date('m/d', strtotime($event->startDate))." $regOpen</a></li>";
                 }
                 $list .= "</ul>";
