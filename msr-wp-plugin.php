@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: MSR_WP_Plugin
- * Version: 1.0.1
+ * Version: 1.0.2
  * Plugin URI: http://www.atorres757.com/
  * Description: This is a plugin to make your Wordpress site work with your MotorsportReg account.
  * Author: Allen Torres
