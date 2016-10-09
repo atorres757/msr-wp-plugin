@@ -9,21 +9,26 @@ class MSR_WP_Widget extends WP_Widget {
      * @var Msr\Service
      */
     public $msrService;
-    public $msrWpPlugin;
+    
+    /**
+     * 
+     * @var MsrWpLogger
+     */
+    public $logger;
 
     function __construct() {
         // Instantiate the parent object
         parent::__construct( false, 'MSR Event List' );
         
         $this->msrService = new Service(new Msr\Client());
-        $this->msrWpPlugin = MSR_WP_Plugin::instance();
+        $this->logger = MsrWpLogger::instance();
         
     }
 
     function widget( $args, $instance ) {
         // Widget output
         
-        $orgId = get_option(MSR_WP_Plugin_Settings::ORG_ID);
+        $orgId = get_option(MSR_WP_Plugin_Settings::getSetting(ORG_ID));
         if (!empty($orgId)) {
             $events = $this->msrService->getOrgCalendar($orgId);
             if (!empty($events->content)) {
@@ -33,7 +38,11 @@ class MSR_WP_Widget extends WP_Widget {
                 }
                 $list .= "</ul>";
                 echo $list;
+            }else{
+                $this->logger->debug("Didn't get any events for $orgId");
             }
+        }else{
+            $this->logger->debug("No orgId provided");
         }
     }
 
@@ -43,6 +52,7 @@ class MSR_WP_Widget extends WP_Widget {
 
     function form( $instance ) {
         // Output admin widget options form
+        echo 'Display MSR Event List';
     }
 }
 
