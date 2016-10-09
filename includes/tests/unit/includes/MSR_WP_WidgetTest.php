@@ -2,7 +2,7 @@
 
 namespace Tests\Wp;
 
-require_once __DIR__ . '/../../../lib/class-msr-wp-plugin-logger.php';
+require_once __DIR__ . '/../../../class-msr-wp-plugin-logger.php';
 
 use PHPUnit\Framework\TestCase;
 
