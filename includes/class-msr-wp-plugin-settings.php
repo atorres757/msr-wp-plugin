@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 class MSR_WP_Plugin_Settings {
     
+    const BASE = "msr_";
     const ORG_ID = "text_org_id";
 
 	/**
@@ -41,7 +42,7 @@ class MSR_WP_Plugin_Settings {
 	public function __construct ( $parent ) {
 		$this->parent = $parent;
 
-		$this->base = 'wpt_';
+		$this->base = self::BASE;
 
 		// Initialise settings
 		add_action( 'init', array( $this, 'init_settings' ), 11 );
@@ -54,6 +55,19 @@ class MSR_WP_Plugin_Settings {
 
 		// Add settings link to plugins page
 		add_filter( 'plugin_action_links_' . plugin_basename( $this->parent->file ) , array( $this, 'add_settings_link' ) );
+	}
+	
+	/**
+	 * Returns the full setting id with template base prefix.
+	 * 
+	 * @param string $setting
+	 * 
+	 * @return string
+	 * 
+	 */
+	public static function getSetting($setting)
+	{
+	    return self::BASE . $setting;
 	}
 
 	/**
