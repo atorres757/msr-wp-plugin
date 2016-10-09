@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name: MSR_WP_Plugin
- * Version: 1.0
- * Plugin URI: http://www.hughlashbrooke.com/
- * Description: This is your starter template for your next WordPress plugin.
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Version: 1.0.1
+ * Plugin URI: http://www.atorres757.com/
+ * Description: This is a plugin to make your Wordpress site work with your MotorsportReg account.
+ * Author: Allen Torres
+ * Author URI: http://www.atorres757.com/
  * Requires at least: 4.0
  * Tested up to: 4.0
  *
@@ -13,7 +13,7 @@
  * Domain Path: /lang/
  *
  * @package WordPress
- * @author Hugh Lashbrooke
+ * @author Allen Torres
  * @since 1.0.0
  */
 
@@ -24,6 +24,7 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 }
 
 // Load plugin class files
+require_once( 'includes/class-msr-wp-plugin-logger.php' );
 require_once( 'includes/class-msr-wp-plugin.php' );
 require_once( 'includes/class-msr-wp-plugin-settings.php' );
 require_once( 'includes/class-msr-wp-plugin-widget.php');
